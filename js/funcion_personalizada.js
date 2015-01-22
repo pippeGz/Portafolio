@@ -95,6 +95,8 @@ $(document).on('ready',function(){
 				alert("su mensaje se envio correctamente");
 				
 			};
+
+			
 			
 		}
 	});
