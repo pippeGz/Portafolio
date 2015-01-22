@@ -73,32 +73,5 @@ $(document).on('ready',function(){
 		$(".special").removeClass("animated infinite bounce");
 	});	
 
-	//envio de mensaje
-
-	$('#formulario_contacto').submit(function(){
-
-		var nombre = $("#name").val();
-		var email = $("#email").val();
-		var asunto = $("#subject").val();
-		var mensaje = $("#message").val();
-
-		if (nombre == "" || email == "" || asunto == "" || mensaje == ""){
-			alert("POR FAVOR LLENE TODOS LOS CAMPOS");
-		}else{
-
-			var direccion = "http://afgm.bl.ee/php/envio_correo.php";
-			
-			$.post(direccion,{ nombre_ajax:nombre ,email_ajax:email,asunto_ajax:asunto,mensaje_ajax:mensaje},mostrarconfirmacion());
-
-			function mostrarconfirmacion(){
-				
-				alert("su mensaje se envio correctamente");
-				
-			};
-
-			
-			
-		}
-	});
-
+	
 });
